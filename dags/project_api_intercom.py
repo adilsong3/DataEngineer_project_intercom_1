@@ -64,12 +64,18 @@ def intercom_project():
             proc_phone = intercom["data"][x]["phone"]
             proc_email = intercom["data"][x]["email"]
             proc_role = intercom["data"][x]["role"]
+            proc_cpf = intercom["data"][x]["custom_attributes"]["CPF"]
+            proc_status = intercom["data"][x]["custom_attributes"]["status"]
+            proc_profile = intercom["data"][x]["custom_attributes"]["profile"]
             operator.update(
                 {
                     "id": proc_id,
                     "name": proc_name,
+                    "cpf": proc_cpf,
                     "phone": proc_phone,
                     "email": proc_email,
+                    "status": proc_status,
+                    "profile": proc_profile,
                     "role": proc_role
                 }
             )
